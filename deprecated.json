@@ -1,0 +1,11 @@
+{
+  "type": "DEPRECATED",
+  "data": {
+    "dependencies": [
+      {
+        "groupId": "org.apache.logging.log4j",
+        "artifactId": "log4j-core"
+      }
+    ]
+  }
+}
