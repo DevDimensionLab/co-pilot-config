@@ -1,0 +1,8 @@
+{
+  "groupId": "no.co-pilot",
+  "artifactId": "flyway-template",
+  "package": "no.co.pilot.template.demo",
+  "name": "flyway-demo",
+  "description": "Demo of flyway with template code",
+  "dependencies": ["data-jpa", "h2", "flyway"]
+}
