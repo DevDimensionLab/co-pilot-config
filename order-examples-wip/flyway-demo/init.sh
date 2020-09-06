@@ -27,12 +27,15 @@ movePackageSrc() {
   done
 }
 
+#only needed first time
+co-pilot download cli
+
 
 # This should be the only thing needed
 co-pilot spring install --config-file co-pilot.info
 
 
-# This should be a config element in co-pilot.info: "co-pilot-depdendencies" : "flyway-demo"
+# "co-pilot spring install --config-file co-pilot.info.next.level" should replace the bash below 
 template_dir=~/.co-pilot/cloud-config/templates/flyway-demo
 
 rsync  --exclude target --exclude *.iml --exclude co-pilot.info --exclude *Application.* --ignore-existing -ahq --progress $template_dir/ webservice/
