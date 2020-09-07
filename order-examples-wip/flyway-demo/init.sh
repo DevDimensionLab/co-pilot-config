@@ -27,6 +27,9 @@ movePackageSrc() {
   done
 }
 
+#delete old webservice
+rm -r webservice
+
 #only needed first time
 co-pilot download cli
 
@@ -38,7 +41,9 @@ co-pilot spring install --config-file co-pilot.info
 # "co-pilot spring install --config-file co-pilot.info.next.level" should replace the bash below 
 template_dir=~/.co-pilot/cloud-config/templates/flyway-demo
 
-rsync  --exclude target --exclude *.iml --exclude co-pilot.info --exclude *Application.* --ignore-existing -ahq --progress $template_dir/ webservice/
+#rsync  --exclude target --exclude *.iml --exclude co-pilot.info --exclude *Application.* --ignore-existing -avh --progress $template_dir/ webservice/
+co-pilot merge template --name flyway-demo --target webservice
+
 cd webservice
 movePackageSrc "no.copilot.template.demo" "no.copilot.demo"
 replace "package refactoring" "*.kt" "no.copilot.template.demo" "no.copilot.demo"
