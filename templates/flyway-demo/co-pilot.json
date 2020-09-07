@@ -1,0 +1,9 @@
+{
+  "language": "kotlin",
+  "groupId": "no.copilot.template",
+  "artifactId": "flyway-demo",
+  "package": "no.copilot.template.demo",
+  "name": "flyway-demo",
+  "description": "Demo of flyway with template code",
+  "dependencies": ["data-jpa", "h2", "flyway"]
+}

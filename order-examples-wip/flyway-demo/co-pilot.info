@@ -1,4 +1,5 @@
 {
+  "language": "kotlin",
   "groupId": "no.copilot",
   "artifactId": "demo",
   "package": "no.copilot.demo",
