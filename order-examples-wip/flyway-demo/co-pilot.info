@@ -1,9 +1,0 @@
-{
-  "language": "kotlin",
-  "groupId": "no.copilot",
-  "artifactId": "demo",
-  "package": "no.copilot.demo",
-  "name": "Demo",
-  "description": "Demo of new app, generated with spring-boot and co-pilot templates",
-  "dependencies": ["web-services","data-jpa", "h2","sqlserver", "flyway"]
-}
