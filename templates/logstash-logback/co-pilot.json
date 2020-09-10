@@ -1,0 +1,9 @@
+{
+  "language": "kotlin",
+  "groupId": "no.copilot.template",
+  "artifactId": "logstash-logback",
+  "package": "no.copilot.template.demo",
+  "name": "logstash-logback",
+  "description": "Demo of logstash-logback resource files",
+  "dependencies": []
+}

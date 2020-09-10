@@ -16,21 +16,7 @@
             }
           ]
         },
-        "replacements": {
-          "files": ["template/logback-logstash/src"],
-          "dependencies": [
-            {
-              "groupId": "ch.qos.logback",
-              "artifactId": "logback-classic",
-              "files": ["src/main/resources..."]
-            },
-            {
-              "groupId": "net.logstash.logback",
-              "artifactId": "logstash-logback-encoder",
-              "files": ["src/main/resources..."]
-            }
-          ]
-        }
+        "replacement_templates": ["logstash-logback"]
       }
     ]
   }
