@@ -6,5 +6,5 @@
   "name": "Demo",
   "description": "Demo of new app, generated with spring-boot and co-pilot templates",
   "dependencies": ["web-services","data-jpa", "h2","sqlserver", "flyway"],
-  "co-pilot-dependencies" : ["flyway-demo" ]
+  "co-pilot-dependencies" : ["flyway-demo", "dockerfile"]
 }

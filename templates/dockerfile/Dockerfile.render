@@ -1,0 +1,8 @@
+FROM ubuntu:18.04
+
+LABEL artifactId="{{.ArtifactId}}"
+LABEL groupId="{{.GroupId}}"
+
+COPY . /app
+RUN make /app
+CMD python /app/app.py
