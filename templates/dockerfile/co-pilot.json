@@ -3,7 +3,7 @@
   "groupId": "no.copilot.template",
   "artifactId": "dockerfile-demo",
   "package": "no.copilot.template.demo",
-  "name": "flyway-demo",
+  "name": "dockerfile-demo",
   "description": "Demo of flyway with template code",
   "dependencies": []
 }

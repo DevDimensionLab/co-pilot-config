@@ -4,6 +4,10 @@
   "artifactId": "demo",
   "package": "no.copilot.demo",
   "name": "Demo",
+  "team": {
+	"name": "demo-name",
+	"email": "demo-email@example.com"
+  },
   "description": "Demo of new app, generated with spring-boot and co-pilot templates",
   "dependencies": ["web-services","data-jpa", "h2","sqlserver", "flyway"],
   "co-pilot-dependencies" : ["flyway-demo", "dockerfile"]
