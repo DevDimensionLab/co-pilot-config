@@ -10,5 +10,11 @@
   },
   "description": "Demo of new app, generated with spring-boot and co-pilot templates",
   "dependencies": ["web-services","data-jpa", "h2","sqlserver", "flyway"],
-  "co-pilot-dependencies" : ["flyway-demo", "dockerfile"]
+  "co-pilot-dependencies" : ["flyway-demo", "dockerfile"],
+  "render": {
+	  "key1": "value1",
+	  "key2": "value2",
+	  "key3": "value3"
+
+  }
 }

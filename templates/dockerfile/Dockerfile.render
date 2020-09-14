@@ -4,6 +4,7 @@ LABEL artifactId="{{.ArtifactId}}"
 LABEL groupId="{{.GroupId}}"
 LABEL team-name="{{.Team.Name}}"
 LABEL team-email="{{.Team.Email}}"
+LABEL key1="{{ index .Render "key1" }}"
 
 COPY . /app
 RUN make /app
