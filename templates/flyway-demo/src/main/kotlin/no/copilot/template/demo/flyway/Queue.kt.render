@@ -1,6 +1,6 @@
 package no.copilot.template.demo.flyway
 
-// this comment should be parsed and rendered {{ index .Render "key1" }}
+// this comment should be parsed and rendered {{index .Render "key1"}}
 
 enum class Queue {
     BAR
