@@ -1,0 +1,21 @@
+{
+ "language": "kotlin",
+ "groupId": "com.example.demo",
+ "artifactId": "actuator-demo",
+ "package": "com.example.demo",
+ "name": "actuator-demo",
+ "description": "actuator-demo",
+ "applicationName": "ActuatorDemoApplication",
+ "team": {
+  "name": "",
+  "email": ""
+ },
+ "dependencies": [
+  "actuator",
+  "web"
+ ],
+ "co-pilot-dependencies": [
+  "build-info"
+ ],
+ "render": null
+}

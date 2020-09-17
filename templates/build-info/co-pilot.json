@@ -1,0 +1,9 @@
+{
+  "language": "kotlin",
+  "groupId": "no.copilot.template",
+  "artifactId": "build-info",
+  "package": "no.copilot.template.demo",
+  "name": "build-info",
+  "description": "Demo of build info with additionalProperties",
+  "dependencies": []
+}
