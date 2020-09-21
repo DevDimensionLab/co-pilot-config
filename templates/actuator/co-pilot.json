@@ -14,7 +14,7 @@
   "actuator",
   "web"
  ],
- "co-pilot-dependencies": [
+ "templates": [
   "build-info"
  ],
  "render": null
