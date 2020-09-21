@@ -1,0 +1,19 @@
+{
+
+ "language": "kotlin",
+ "groupId": "no.org",
+ "artifactId": "myapp",
+ "package": "no.org.myapp",
+ "name": "MyService",
+ "description": "Some service",
+ "dependencies": [
+	 "web-services",
+	 "data-jpa",
+	 "h2",
+	 "sqlserver",
+	 "flyway"
+ ],
+ "templates": [
+	 "co-pilot-template-testing"
+ ]
+}
