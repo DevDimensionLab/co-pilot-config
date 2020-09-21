@@ -10,7 +10,7 @@
   },
   "description": "Demo of new app, generated with spring-boot and co-pilot templates",
   "dependencies": ["web-services"],
-  "co-pilot-dependencies" : ["build-info", "actuator", "dockerfile"],
+  "co-pilot-dependencies" : ["build-info", "actuator", "dockerfile", "flyway-demo"],
   "render": {
 	  "key1": "value1",
 	  "key2": "value2",
