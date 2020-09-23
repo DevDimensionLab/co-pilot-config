@@ -1,0 +1,17 @@
+{
+ "language": "kotlin",
+ "groupId": "no.co_pilot_cli",
+ "artifactId": "scheduling-basic",
+ "package": "no.co_pilot_cli.template.scheduling",
+ "name": "Basic scheduling example",
+ "description": "Basic scheduling example",
+ "applicationName": "SchedulingBasicApplication",
+ "team": {
+  "name": "",
+  "email": ""
+ },
+ "dependencies": [
+  "web-services"
+ ],
+ "templates": ["logstash-logback"]
+}
