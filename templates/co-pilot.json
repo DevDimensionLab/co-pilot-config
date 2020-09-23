@@ -1,0 +1,15 @@
+{
+ "language": "kotlin",
+ "groupId": "no.co_pilot_cli",
+ "artifactId": "basic-rest",
+ "package": "no.co_pilot_cli.template.rest",
+ "name": "Basic REST example",
+ "description": "Basic REST example",
+ "applicationName": "",
+ "dependencies": [
+	 "web-services"
+ ],
+ "templates": [
+ ],
+ "render": null
+}
