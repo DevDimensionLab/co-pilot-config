@@ -1,16 +1,16 @@
 {
   "language": "kotlin",
-  "groupId": "no.copilot",
-  "artifactId": "demo",
-  "package": "no.copilot.demo",
-  "name": "Demo",
+  "groupId": "com.example",
+  "artifactId": "app",
+  "package": "com.example.app",
+  "name": "Example App",
   "team": {
 	"name": "demo-name",
 	"email": "demo-email@example.com"
   },
   "description": "Demo of new app, generated with spring-boot and co-pilot templates",
   "dependencies": ["web-services"],
-  "templates" : ["build-info", "actuator", "dockerfile", "flyway-demo"],
+  "templates" : ["build-info", "actuator", "dockerfile", "flyway"],
   "render": {
 	  "key1": "value1",
 	  "key2": "value2",
