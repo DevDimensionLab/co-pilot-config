@@ -5,8 +5,9 @@ import com.github.tomakehurst.wiremock.WireMockServer
 import com.github.tomakehurst.wiremock.client.WireMock.*
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration
+import no.co_pilot_cli.template.client.config.FooHttpClient
+import no.co_pilot_cli.template.client.domain.Foo
 import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -17,7 +18,7 @@ internal class FooHttpClientTest {
             .notifier(ConsoleNotifier(true)))
 
     @Test
-    fun getFooByNameBadRequest() {
+    fun getFooByNameNoFound() {
         val requestConfig = RequestConfig(url = "http://localhost", port = wiremock.port())
         val fooClient = FooHttpClient(config = requestConfig)
 
@@ -36,6 +37,17 @@ internal class FooHttpClientTest {
         wiremock.verify(1, getRequestedFor(urlEqualTo("/api/foo?name=bar")))
     }
 
+    @Test
+    internal fun postRequestForFoo() {
+        val requestConfig = RequestConfig(url = "http://localhost", port = wiremock.port())
+        val fooClient = FooHttpClient(config = requestConfig)
+        val result = fooClient.postFooByName("bar", Foo("bar"))
+
+        assertNotNull(result)
+        assertEquals("bar", result.name)
+        wiremock.verify(1, postRequestedFor(urlEqualTo("/api/foo?name=bar")))
+    }
+
     @BeforeEach
     internal fun setUp() {
         wiremock.start()
@@ -44,6 +56,11 @@ internal class FooHttpClientTest {
                         .withStatus(200)
                         .withBody(jacksonObjectMapper().writeValueAsString(Foo("bar")))))
 
+        wiremock.stubFor(post(urlEqualTo("/api/foo?name=bar"))
+                .withRequestBody(equalToJson(mapper.writeValueAsString(Foo("bar"))))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withBody(jacksonObjectMapper().writeValueAsString(Foo("bar")))))
     }
 
     @AfterEach
