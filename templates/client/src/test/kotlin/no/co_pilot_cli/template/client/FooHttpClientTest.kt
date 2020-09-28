@@ -5,7 +5,9 @@ import com.github.tomakehurst.wiremock.WireMockServer
 import com.github.tomakehurst.wiremock.client.WireMock.*
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration
-import no.co_pilot_cli.template.client.config.FooHttpClient
+import no.co_pilot_cli.template.client.config.HttpClientException
+import no.co_pilot_cli.template.client.config.RequestConfig
+import no.co_pilot_cli.template.client.config.mapper
 import no.co_pilot_cli.template.client.domain.Foo
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.*
@@ -18,7 +20,7 @@ internal class FooHttpClientTest {
             .notifier(ConsoleNotifier(true)))
 
     @Test
-    fun getFooByNameNoFound() {
+    fun getFooByNameNotFound() {
         val requestConfig = RequestConfig(url = "http://localhost", port = wiremock.port())
         val fooClient = FooHttpClient(config = requestConfig)
 

@@ -1,4 +1,4 @@
-package no.co_pilot_cli.template.client
+package no.co_pilot_cli.template.client.config
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature

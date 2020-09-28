@@ -1,6 +1,10 @@
-package no.co_pilot_cli.template.client.config
+package no.co_pilot_cli.template.client
 
-import no.co_pilot_cli.template.client.*
+import no.co_pilot_cli.template.client.config.RequestConfig
+import no.co_pilot_cli.template.client.config.exchange
+import no.co_pilot_cli.template.client.config.getRequestForFoo
+import no.co_pilot_cli.template.client.config.mapper
+import no.co_pilot_cli.template.client.config.postRequestForFoo
 import no.co_pilot_cli.template.client.domain.Foo
 
 class FooHttpClient(private val config: RequestConfig) {
@@ -14,6 +18,6 @@ class FooHttpClient(private val config: RequestConfig) {
     }
 
     private fun Foo.fromFoo() : String {
-        return mapper.writeValueAsString(this);
+        return mapper.writeValueAsString(this)
     }
 }
