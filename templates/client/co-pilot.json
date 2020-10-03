@@ -1,0 +1,14 @@
+{
+ "language": "kotlin",
+ "groupId": "no.co_pilot_cli",
+ "artifactId": "template-client",
+ "package": "no.co_pilot_cli.template.client",
+ "name": "ApiTemplate",
+ "description": "Template for API where client is Java or Kotlin",
+ "applicationName": "ClientApplication",
+ "dependencies": [
+ ],
+ "templates": [
+ ],
+ "render": null
+}
