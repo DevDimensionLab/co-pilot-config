@@ -1,4 +1,8 @@
-FROM copilotcli/co-pilot-cli:latest
+FROM co-pilot:latest
+
+RUN apk --update add bash maven openjdk11 && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm /var/cache/apk/*
 
 WORKDIR /config
 

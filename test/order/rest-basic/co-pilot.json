@@ -10,5 +10,5 @@
   },
   "description": "Demo of new app, generated with spring-boot and co-pilot templates",
   "dependencies": ["web-services"],
-  "templates" : ["build-info", "actuator", "dockerfile", "rest-basic", "logstash-logback", "scheduling-basic"]
+  "templates" : ["dockerfile", "rest-basic"]
 }
