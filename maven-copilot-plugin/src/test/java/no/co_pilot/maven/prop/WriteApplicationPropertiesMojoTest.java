@@ -1,20 +1,10 @@
 package no.co_pilot.maven.prop;
 
-import org.apache.maven.plugin.Mojo;
 import org.apache.maven.plugin.testing.AbstractMojoTestCase;
-import org.apache.maven.plugin.testing.MojoRule;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.BlockJUnit4ClassRunner;
 
 import java.io.File;
 
-import static org.codehaus.plexus.PlexusTestCase.getTestFile;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
-@RunWith(BlockJUnit4ClassRunner.class)
 public class WriteApplicationPropertiesMojoTest extends AbstractMojoTestCase {
 
 /*    @Rule
@@ -44,11 +34,12 @@ public class WriteApplicationPropertiesMojoTest extends AbstractMojoTestCase {
 
     @Test
     public void testMojo() throws Exception {
-        File pom = getTestFile("src/main/java/resources/pom.xml");
+        File testPom = getTestFile("src/test/resources/pom.xml");
 
-        Mojo mojo = lookupEmptyMojo("install", pom);
-        assertNotNull(mojo);
-        assertTrue(pom.exists());
+        WriteApplicationPropertiesMojo mojo = new WriteApplicationPropertiesMojo();
+        mojo = (WriteApplicationPropertiesMojo) configureMojo(
+                    mojo, extractPluginConfiguration("maven-copilot-plugin", testPom
+                ));
         mojo.execute();
     }
 }
