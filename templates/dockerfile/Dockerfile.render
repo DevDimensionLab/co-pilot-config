@@ -1,4 +1,7 @@
-FROM ubuntu:18.04
+FROM openjdk:19-alpine
+
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
 
 LABEL artifactId="{{.ArtifactId}}"
 LABEL groupId="{{.GroupId}}"
@@ -6,6 +9,7 @@ LABEL team-name="{{.Team.Name}}"
 LABEL team-email="{{.Team.Email}}"
 LABEL key1="{{ index .Render "key1" }}"
 
-COPY . /app
-RUN make /app
-CMD python /app/app.py
+ARG JAR_FILE=target/*.jar
+
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
