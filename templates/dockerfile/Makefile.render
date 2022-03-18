@@ -1,0 +1,8 @@
+build: install
+	docker build --tag {{.ArtifactId}}:latest .
+
+run: build
+	docker run -it --rm -p 8080:8080 {{.ArtifactId}}:latest
+
+install:
+	mvn clean install
