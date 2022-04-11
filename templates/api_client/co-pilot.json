@@ -1,0 +1,9 @@
+{
+  "language": "kotlin",
+  "groupId": "no.copilot.templates",
+  "artifactId": "api-client-template-pom",
+  "package": "no.copilot.templates",
+  "name": "api_client",
+  "description": "Demo of api and client structure",
+  "dependencies": []
+}
