@@ -1,0 +1,27 @@
+{
+    "groupId": "com.example.demo",
+    "artifactId": "CoPilotDemoWebservice",
+    "language": "kotlin",
+    "package": "com.example.demo",
+    "applicationName": "CoPilotDemoWebservice",
+    "name": "CoPilotDemoWebservice",
+    "description": "Webservice generated from Co-pilot-templates",
+    "team": {
+        "name": "copilot",
+        "email": "copilot@copilot.info"
+    },
+    "dependencies": [
+        "web-services"
+    ],
+    "templates": [
+        "api_client"
+    ],
+    "settings": {
+        "disableDependencySort": false,
+        "disableSpringBootUpgrade": false,
+        "disableKotlinUpgrade": false,
+        "disableUpgradesFor": null,
+        "maxVersionForDependencies": null
+    },
+    "render": null
+}
