@@ -19,6 +19,7 @@
         "disableSpringBootUpgrade": false,
         "disableKotlinUpgrade": false,
         "disableUpgradesFor": null,
+	"maxSpringBootVersion": "2.7.7",
         "maxVersionForDependencies": null
     },
     "render": null
