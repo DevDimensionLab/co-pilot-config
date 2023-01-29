@@ -1,0 +1,4 @@
+cloudConfigSource: 
+  rootUrl: https://github.com/DevDimensionLab/co-pilot-config
+  relativFileUrl: /blob/master
+
