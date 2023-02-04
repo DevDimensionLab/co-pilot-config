@@ -1,0 +1,30 @@
+{
+    "groupId": "org.devdimensionlab",
+    "artifactId": "microservice",
+    "language": "kotlin",
+    "package": "org.devdimensionlab.microservice",
+    "applicationName": "Microservice",
+    "name": "Microservice",
+    "description": "Microservice generated from spring-boot dependencies and devdimensionlab-templates",
+    "team": {
+        "name": "devdimensionlab",
+        "email": "devdimensionlab@devdimensionlab.org"
+    },
+    "dependencies": [
+        "web-services"
+    ],
+    "templates": [
+        "log/logstash-logback",
+        "microservice/basic-controller",
+        "microservice/test"
+    ],
+    "settings": {
+        "disableDependencySort": false,
+        "disableSpringBootUpgrade": false,
+        "disableKotlinUpgrade": false,
+        "disableUpgradesFor": null,
+	    "maxSpringBootVersion": null,
+        "maxVersionForDependencies": null
+    },
+    "render": null
+}

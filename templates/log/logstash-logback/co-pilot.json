@@ -1,0 +1,5 @@
+{
+  "language": "java",
+  "groupId": "org.devdimensionlab.co-pilot",
+  "artifactId": "logstash-logback"
+}
