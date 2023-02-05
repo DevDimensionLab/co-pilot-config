@@ -1,6 +1,5 @@
-package no.co_pilot_cli.template.rest.service
+package org.devdimensionlab.template.microservice.foo
 
-import no.co_pilot_cli.template.rest.domain.Foo
 import org.springframework.stereotype.Service
 
 @Service

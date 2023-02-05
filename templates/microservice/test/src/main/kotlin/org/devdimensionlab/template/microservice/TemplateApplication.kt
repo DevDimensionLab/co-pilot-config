@@ -1,11 +1,11 @@
-package no.co_pilot_cli.template.rest
+package org.devdimensionlab.template.microservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class BasicRestExampleApplication
+class TemplateTestApplication
 
 fun main(args: Array<String>) {
-	runApplication<BasicRestExampleApplication>(*args)
+	runApplication<TemplateTestApplication>(*args)
 }

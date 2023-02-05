@@ -1,7 +1,5 @@
-package no.co_pilot_cli.template.rest.controller
+package org.devdimensionlab.template.microservice.foo
 
-import no.co_pilot_cli.template.rest.domain.Foo
-import no.co_pilot_cli.template.rest.service.FooService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
