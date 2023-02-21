@@ -1,0 +1,9 @@
+{
+  "language": "kotlin",
+  "groupId": "no.copilot.template",
+  "artifactId": "flyway-demo",
+  "package": "no.copilot.template.demo",
+  "name": "flyway-demo",
+  "description": "Automate database migrations with Flyway in Spring Boot.",
+  "dependencies": ["data-jpa", "h2", "flyway"]
+}

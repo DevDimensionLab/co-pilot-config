@@ -1,0 +1,5 @@
+{
+ "language": "kotlin",
+ "package": "no.co_pilot_cli.template.scheduling",
+ "description": "Basic scheduling and error handling"
+}

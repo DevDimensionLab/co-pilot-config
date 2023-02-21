@@ -1,21 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.devdimensionlab.co-pilot</groupId>
         <artifactId>templates</artifactId>
         <version>1.0.0</version>
     </parent>
-
     <artifactId>microservice</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>test</module>
+        <module>flyway</module>
         <module>basic-controller</module>
+        <module>basic-scheduling</module>
+        <module>test</module>
     </modules>
-
     <build>
         <plugins>
             <plugin>
@@ -43,11 +40,5 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
-
-
-
-
-
 

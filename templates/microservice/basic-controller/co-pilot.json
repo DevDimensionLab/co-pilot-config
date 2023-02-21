@@ -1,8 +1,5 @@
 {
   "language": "kotlin",
-  "groupId": "org.devdimensionlab.co-pilot",
-  "artifactId": "basic-controller",
   "package": "org.devdimensionlab.template.microservice",
-  "name": "basic-controller",
-  "description": "Demo of basic controller"
+  "description": "Basic controller, service and data-class"
 }

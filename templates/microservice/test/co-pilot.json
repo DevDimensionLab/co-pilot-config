@@ -4,5 +4,5 @@
   "artifactId": "test",
   "package": "org.devdimensionlab.template.microservice",
   "name": "test",
-  "description": "Template for test support"
+  "description": "ApplicationContextTest and LocalServer"
 }

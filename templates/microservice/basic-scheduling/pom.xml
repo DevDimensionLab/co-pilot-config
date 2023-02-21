@@ -6,16 +6,30 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.0.2</version>
     </parent>
-    <groupId>no.copilot.templates</groupId>
-    <artifactId>api-client-template-pom</artifactId>
+    <groupId>no.co_pilot_cli</groupId>
+    <artifactId>scheduling-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>api_client</name>
-    <description>API: DTOs and interfaces. Client: HTTP integration</description>
+    <name>Basic scheduling example</name>
+    <description>Basic scheduling example</description>
     <properties>
-        <java.version>17</java.version>
-        <kotlin.version>1.8.10</kotlin.version>
+        <logback-classic.version>1.4.5</logback-classic.version>
+        <logstash-logback-encoder.version>7.3</logstash-logback-encoder.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash-logback-encoder.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
@@ -26,12 +40,18 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
     <build>
