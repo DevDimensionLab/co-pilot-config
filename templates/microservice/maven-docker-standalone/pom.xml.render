@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.devdimensionlab.co-pilot</groupId>
+        <artifactId>microservice</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>maven-docker-standalone</artifactId>
+
+    <properties>
+        <jib-maven-plugin.version>3.3.1</jib-maven-plugin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <from>
+                        <image></image>
+                    </from>
+                    <to>
+                        <image></image>
+                    </to>
+                    <container>
+                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+                        <entrypoint>INHERIT</entrypoint>
+                        <labels>
+                            <team>{{.Team.Name}}</team>
+                        </labels>
+                        <environment>
+                            <APPCMD>java -cp @/app/jib-classpath-file @/app/jib-main-class-file -Dlogging.config=classpath:logback-json.xml</APPCMD>
+                        </environment>
+                    </container>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
