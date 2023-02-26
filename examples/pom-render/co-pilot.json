@@ -14,8 +14,8 @@
         "web-services"
     ],
     "templates": [
-        "microservice/maven-docker-standalone",
-        "log/logstash-logback"
+        "server/common/maven-docker-standalone",
+        "common/logstash-logback"
     ],
     "settings": {
         "disableDependencySort": false,

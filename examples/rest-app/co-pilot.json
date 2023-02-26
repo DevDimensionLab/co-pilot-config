@@ -14,9 +14,9 @@
         "web-services"
     ],
     "templates": [
-        "log/logstash-logback",
-        "microservice/basic-controller",
-        "microservice/test"
+        "common/logstash-logback",
+        "server/common/test",
+        "server/rest/basic-controller"
     ],
     "settings": {
         "disableDependencySort": false,
