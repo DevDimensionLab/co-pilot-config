@@ -1,20 +1,19 @@
 {
     "groupId": "com.example.demo",
-    "artifactId": "CoPilotDemoWebservice",
+    "artifactId": "rest-api",
     "language": "kotlin",
     "package": "com.example.demo",
-    "applicationName": "CoPilotDemoWebservice",
-    "name": "CoPilotDemoWebservice",
-    "description": "Webservice generated from Co-pilot-templates",
+    "applicationName": "rest-api",
+    "name": "rest-api",
+    "description": "REST API and client (http-integration)",
     "team": {
         "name": "copilot",
         "email": "copilot@copilot.info"
     },
     "dependencies": [
-        "web-services"
     ],
     "templates": [
-        "api_client"
+        "rest-api"
     ],
     "settings": {
         "disableDependencySort": false,

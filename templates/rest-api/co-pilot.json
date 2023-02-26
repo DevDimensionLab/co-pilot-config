@@ -1,5 +1,9 @@
 {
-    "language": "kotlin",
-    "package": "no.copilot.templates",
-    "description": "API: DTOs and interfaces. Client: HTTP integration"
+  "language": "java",
+  "groupId": "org.devdimensionlab.templates",
+  "artifactId": "api-client-template-pom",
+  "package": "org.devdimensionlab.templates",
+  "name": "api_client",
+  "description": "Demo of api and client structure",
+  "dependencies": []
 }
