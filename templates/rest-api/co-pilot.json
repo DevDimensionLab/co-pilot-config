@@ -1,0 +1,5 @@
+{
+    "language": "kotlin",
+    "package": "no.copilot.templates",
+    "description": "API: DTOs and interfaces. Client: HTTP integration"
+}

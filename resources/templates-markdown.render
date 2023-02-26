@@ -1,0 +1,9 @@
+# Templates
+
+Name                           | Description      | Language
+:------------------------------|:----------------------------------------------|:------------------
+{{range .Templates}}{{.Name}} | {{with .Project.Config}}{{.Description}} | {{.Language}}{{end}}
+{{end}}
+
+
+

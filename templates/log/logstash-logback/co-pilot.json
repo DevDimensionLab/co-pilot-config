@@ -1,6 +1,0 @@
-{
-  "language": "java",
-  "groupId": "org.devdimensionlab.co-pilot",
-  "artifactId": "logstash-logback",
-  "description" : "Configure logging using Logback and Logstash"
-}
