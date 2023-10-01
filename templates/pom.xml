@@ -1,39 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.2</version>
+        <version>3.1.4</version>
     </parent>
-
-    <name>templates</name>
-    <properties>
-        <java.version>17</java.version>
-        <kotlin.version>1.8.10</kotlin.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <groupId>org.devdimensionlab.templates</groupId>
     <artifactId>templates</artifactId>
     <version>1.0.0</version>
-
     <packaging>pom</packaging>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jdk8</artifactId>
-        </dependency>
-    </dependencies>
-
+    <name>templates</name>
     <modules>
         <module>common</module>
         <module>rest-api</module>
         <module>server</module>
     </modules>
-
+    <properties>
+        <java.version>17</java.version>
+        <kotlin.version>1.9.10</kotlin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -43,7 +29,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
@@ -68,5 +59,5 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
+
