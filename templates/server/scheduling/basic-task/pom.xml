@@ -5,9 +5,7 @@
         <artifactId>server-scheduling</artifactId>
         <version>1.0.0</version>
     </parent>
-
     <artifactId>server-scheduling-basic-task</artifactId>
-
     <dependencies>
         <dependency>
             <groupId>org.devdimensionlab.templates</groupId>
