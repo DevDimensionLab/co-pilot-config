@@ -1,8 +1,8 @@
 {
     "groupId": "org.devdimensionlab",
-    "artifactId": "my-rest-service",
+    "artifactId": "rest-service",
     "language": "kotlin",
-    "package": "org.devdimensionlab.my.restservice",
+    "package": "org.devdimensionlab",
     "applicationName": "RestService",
     "name": "RestService",
     "description": "REST Service generated from spring-boot dependencies and devdimensionlab-templates",

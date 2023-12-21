@@ -1,4 +1,4 @@
-package no.copilot.templates.client
+package org.devdimensionlab.templates.client
 
 import no.copilot.templates.api.Foo
 import no.copilot.templates.api.FooService

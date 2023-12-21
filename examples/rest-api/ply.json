@@ -2,7 +2,7 @@
     "groupId": "org.devdimensionlab",
     "artifactId": "rest-api",
     "language": "kotlin",
-    "package": "org.devdimensionlab.rest",
+    "package": "org.devdimensionlab.rest_api",
     "applicationName": "rest-api",
     "name": "rest-api",
     "description": "REST API and client (http-integration)",
