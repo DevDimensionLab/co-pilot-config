@@ -1,5 +1,5 @@
 {
-  "language": "java",
+  "language": "kotlin",
   "groupId": "org.devdimensionlab.templates",
   "artifactId": "api-client-template-pom",
   "package": "org.devdimensionlab.templates",
