@@ -1,21 +1,22 @@
 {
     "groupId": "org.devdimensionlab",
-    "artifactId": "microservice",
+    "artifactId": "my-rest-service",
     "language": "kotlin",
-    "package": "org.devdimensionlab.microservice",
-    "applicationName": "Microservice",
-    "name": "Microservice",
-    "description": "Microservice generated from spring-boot dependencies and devdimensionlab-templates",
+    "package": "org.devdimensionlab.my.restservice",
+    "applicationName": "RestService",
+    "name": "RestService",
+    "description": "REST Service generated from spring-boot dependencies and devdimensionlab-templates",
     "team": {
-        "name": "devdimensionlab",
-        "email": "devdimensionlab@devdimensionlab.org"
+        "name": "team-name",
+        "email": "team@email.com"
     },
     "dependencies": [
         "web-services"
     ],
     "templates": [
-        "server/common/maven-docker-standalone",
-        "common/logstash-logback"
+        "common/logstash-logback",
+        "server/common/test",
+        "server/rest/basic-controller"
     ],
     "settings": {
         "disableDependencySort": false,

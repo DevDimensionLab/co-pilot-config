@@ -1,14 +1,14 @@
 {
-    "groupId": "com.example.demo",
+    "groupId": "org.devdimensionlab",
     "artifactId": "rest-api",
     "language": "kotlin",
-    "package": "com.example.demo",
+    "package": "org.devdimensionlab.rest",
     "applicationName": "rest-api",
     "name": "rest-api",
     "description": "REST API and client (http-integration)",
     "team": {
-        "name": "copilot",
-        "email": "copilot@copilot.info"
+        "name": "team-name",
+        "email": "team@email.com"
     },
     "dependencies": [
     ],
