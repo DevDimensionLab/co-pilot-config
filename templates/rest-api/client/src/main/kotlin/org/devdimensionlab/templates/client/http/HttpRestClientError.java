@@ -1,4 +1,4 @@
-package org.devdimensionlab.template.http.rest.client;
+package org.devdimensionlab.templates.client.http;
 
 public class HttpRestClientError extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package org.devdimensionlab.template.http.rest.client
+package org.devdimensionlab.templates.client.http
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
@@ -44,7 +44,10 @@ class HttpRestClient(
                     bodyFunc = { objectMapper.readValue(it.body(), responseType) })
             },
             onFailure = {
-                throw HttpRestClientError("$uri ${elapsedTime}ms - $it", it)
+                throw HttpRestClientError(
+                    "$uri ${elapsedTime}ms - $it",
+                    it
+                )
             }
         )
     }

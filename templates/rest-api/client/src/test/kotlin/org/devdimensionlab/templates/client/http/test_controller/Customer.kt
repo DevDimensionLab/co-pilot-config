@@ -1,4 +1,4 @@
-package org.devdimensionlab.template.http.rest.client.test_controller
+package org.devdimensionlab.templates.client.http.test_controller
 
 data class Customer(
         val customerId: String,

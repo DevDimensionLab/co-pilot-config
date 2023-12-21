@@ -1,6 +1,6 @@
 package org.devdimensionlab.template.microservice
 
-import org.devdimensionlab.template.http.rest.client.HttpRestClientApplication
+import org.devdimensionlab.templates.client.http.HttpRestClientApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Import
 import org.springframework.context.annotation.Configuration

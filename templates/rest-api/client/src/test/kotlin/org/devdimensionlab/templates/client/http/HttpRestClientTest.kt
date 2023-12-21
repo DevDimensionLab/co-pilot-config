@@ -1,8 +1,8 @@
-package org.devdimensionlab.template.http.rest.client
+package org.devdimensionlab.templates.client.http
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import org.devdimensionlab.template.http.rest.client.test_controller.Customer
+import org.devdimensionlab.templates.client.http.test_controller.Customer
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

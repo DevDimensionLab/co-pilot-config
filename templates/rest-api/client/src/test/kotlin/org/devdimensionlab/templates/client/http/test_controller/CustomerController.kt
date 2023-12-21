@@ -1,4 +1,4 @@
-package org.devdimensionlab.template.http.rest.client.test_controller
+package org.devdimensionlab.templates.client.http.test_controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

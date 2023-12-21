@@ -1,4 +1,4 @@
-package org.devdimensionlab.template.http.rest.client
+package org.devdimensionlab.templates.client.http
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
