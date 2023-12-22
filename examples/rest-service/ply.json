@@ -1,0 +1,30 @@
+{
+    "groupId": "org.devdimensionlab",
+    "artifactId": "rest-service",
+    "language": "kotlin",
+    "package": "org.devdimensionlab",
+    "applicationName": "RestService",
+    "name": "RestService",
+    "description": "REST Service generated from spring-boot dependencies and devdimensionlab-templates",
+    "team": {
+        "name": "team-name",
+        "email": "team@email.com"
+    },
+    "dependencies": [
+        "web-services"
+    ],
+    "templates": [
+        "common/logstash-logback",
+        "server/common/test",
+        "server/rest/basic-controller"
+    ],
+    "settings": {
+        "disableDependencySort": false,
+        "disableSpringBootUpgrade": false,
+        "disableKotlinUpgrade": false,
+        "disableUpgradesFor": null,
+	    "maxSpringBootVersion": null,
+        "maxVersionForDependencies": null
+    },
+    "render": null
+}
