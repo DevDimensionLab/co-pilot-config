@@ -1,0 +1,26 @@
+{
+    "groupId": "org.devdimensionlab",
+    "artifactId": "rest-api",
+    "language": "kotlin",
+    "package": "org.devdimensionlab.rest_api",
+    "applicationName": "rest-api",
+    "name": "rest-api",
+    "description": "REST API and client (http-integration)",
+    "team": {
+        "name": "team-name",
+        "email": "team@email.com"
+    },
+    "dependencies": [
+    ],
+    "templates": [
+        "rest-api"
+    ],
+    "settings": {
+        "disableDependencySort": false,
+        "disableSpringBootUpgrade": false,
+        "disableKotlinUpgrade": false,
+        "disableUpgradesFor": null,
+        "maxVersionForDependencies": null
+    },
+    "render": null
+}
