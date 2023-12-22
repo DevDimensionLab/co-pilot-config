@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream:examples/rest-api/co-pilot.json
     "groupId": "com.example.demo",
+=======
+    "groupId": "org.devdimensionlab.rest_api",
+>>>>>>> Stashed changes:examples/rest-api/ply.json
     "artifactId": "rest-api",
     "language": "kotlin",
     "package": "com.example.demo",
