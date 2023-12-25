@@ -1,4 +1,4 @@
-package org.devdimensionlab.template.microservice
+package org.devdimensionlab.templates.client.http.test_controller
 
 import org.devdimensionlab.templates.client.http.HttpRestClientApplication
 import org.springframework.boot.runApplication

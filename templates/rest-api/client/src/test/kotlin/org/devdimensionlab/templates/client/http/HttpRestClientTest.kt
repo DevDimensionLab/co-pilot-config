@@ -2,7 +2,7 @@ package org.devdimensionlab.templates.client.http
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import org.devdimensionlab.templates.client.http.test_controller.Customer
+import no.copilot.templates.api.Team
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
@@ -20,10 +20,10 @@ class HttpRestClientTest {
 			baseUrl = "http://localhost:$serverPort",
 			objectMapper = ObjectMapper().registerModule(KotlinModule.Builder().build()))
 
-		val response = restClient.getEntity("/customers/42", Customer::class.java)
+		val response = restClient.getEntity("/teams/red", Team::class.java)
 
 		assertEquals( 200, response.status)
-		assertEquals("42", response.body().customerId )
+		assertEquals("red", response.body().name )
 	}
 
 }
