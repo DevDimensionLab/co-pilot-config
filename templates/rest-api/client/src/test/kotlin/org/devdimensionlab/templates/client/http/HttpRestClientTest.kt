@@ -1,5 +1,6 @@
 package org.devdimensionlab.templates.client.http
 
+import com.fasterxml.jackson.core.type.TypeReference
 import org.devdimensionlab.templates.api.Team
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -20,7 +21,7 @@ class HttpRestClientTest {
 
 	@BeforeEach
 	fun setup() {
-		this.restClient = HttpRestClient(baseUrl = "http://localhost:$serverPort")
+		this.restClient = HttpRestClient(baseUrl = "http://localhost:$serverPort/resource")
 	}
 
 	@Test
@@ -30,9 +31,15 @@ class HttpRestClientTest {
 	}
 
 	@Test
-	fun `Get entity should return typed response for body `() {
+	fun `Get entity should support simple type for body `() {
 		val response = restClient.getEntity("/teams/red", Team::class.java)
 		assertEquals("red", response.body().name )
+	}
+
+	@Test
+	fun `Get entity should support map as type for body`() {
+		val response = restClient.getEntity("/teams/keyvalue", object : TypeReference<Map<String, Team>>() {})
+		assertEquals(3, response.body().size )
 	}
 
 	@Test
@@ -40,7 +47,7 @@ class HttpRestClientTest {
 		val response = restClient.getEntities("/teams", Team::class.java)
 		assertEquals(3, response.body().size )
 	}
-	
+
 	// error handling below -->
 
 	@Test
@@ -53,11 +60,12 @@ class HttpRestClientTest {
 	fun `Rest client should throw HttpRestExeption with ConnectException as cause for unknow host`() {
 		this.restClient = HttpRestClient(baseUrl = "http://unknowhost")
 
-		val httpRestExeption: HttpRestExeption = Assertions.assertThrows(HttpRestExeption::class.java) {
+		val httpRestException: HttpRestException = Assertions.assertThrows(
+			HttpRestException::class.java) {
 			restClient.getEntity("/xyz/red", Team::class.java)
 		}
 
-		assertEquals(java.net.ConnectException::class.java, httpRestExeption.cause?.javaClass )
+		assertEquals(java.net.ConnectException::class.java, httpRestException.cause?.javaClass )
 	}
 
 

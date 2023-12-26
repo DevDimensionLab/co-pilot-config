@@ -1,10 +1,10 @@
-package no.copilot.templates.api
-
-import org.devdimensionlab.templates.api.Team
+package org.devdimensionlab.templates.api
 
 interface TeamService {
 
     fun getAll(): List<Team>
+
+    fun getAllAsMap(): Map<String,Team>
 
     fun getByName(name : String) : Team
 

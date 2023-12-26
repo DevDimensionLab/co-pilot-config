@@ -1,5 +1,6 @@
 package org.devdimensionlab.templates.client.http
 
+import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.JavaType
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
@@ -28,11 +29,12 @@ open class HttpRestClient(
 
     fun <T> getEntity(path: String, responseType: Class<T>): TypedResponse<T>
         = getEntity(path, objectMapper.typeFactory.constructType(responseType))
-
+    fun <T> getEntity(path: String, responseType: TypeReference<T>): TypedResponse<T>
+        = getEntity(path, objectMapper.typeFactory.constructType(responseType))
     fun <T> getEntities(path: String, responseType: Class<T>): TypedResponse<List<T>>
         = getEntity(path, objectMapper.typeFactory.constructCollectionType(List::class.java, responseType))
 
-    fun <T> getEntity(path: String, responseType: JavaType): TypedResponse<T> {
+    private fun <T> getEntity(path: String, responseType: JavaType): TypedResponse<T> {
 
         val uri = URI(baseUrl + path)
         val httpRequest: HttpRequest = HttpRequest.newBuilder()
@@ -55,7 +57,7 @@ open class HttpRestClient(
                     bodyFunc = { objectMapper.readValue(it.body(), responseType) })
             },
             onFailure = {
-                throw HttpRestExeption(
+                throw HttpRestException(
                     "$uri ${elapsedTime}ms - $it",
                     it
                 )

@@ -24,14 +24,18 @@ class TeamServiceHttpClientTest {
     }
 
     @Test
-    fun `Get team by id`() {
-        assertEquals("red", teamService.getByName("red").name)
-    }
-
-    @Test
     fun `Get all teams`() {
         assertEquals(3, teamService.getAll().size )
     }
 
+    @Test
+    fun `Get all teams ny id and Team`() {
+        assertEquals(3, teamService.getAllAsMap().size )
+    }
+
+    @Test
+    fun `Get team by id`() {
+        assertEquals("blue", teamService.getByName("blue").name)
+    }
 
 }
