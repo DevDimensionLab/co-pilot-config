@@ -1,3 +1,3 @@
-package no.copilot.templates.api
+package org.devdimensionlab.templates.api
 
 data class Team(val name : String)
