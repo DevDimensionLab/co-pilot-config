@@ -52,16 +52,21 @@ open class HttpRestClient(
         return response.fold(
             onSuccess = {
                 log.info("$uri ${it.statusCode()} ${elapsedTime}ms ")
-                TypedResponse(
-                    status = it.statusCode(),
-                    bodyFunc = { objectMapper.readValue(it.body(), responseType) })
+
+                if (it.headers().map()["content-type"]?.contains("application/problem+json") == true)
+                    TypedResponse(problem = objectMapper.readValue(it.body(), ProblemDetail::class.java))
+                else
+                    TypedResponse(
+                        status = it.statusCode(),
+                        bodyFunc = { objectMapper.readValue(it.body(), responseType) })
             },
             onFailure = {
                 throw HttpRestException(
-                    "$uri ${elapsedTime}ms - $it",
-                    it
+                    message = "$uri ${elapsedTime}ms - $it",
+                    cause = it
                 )
             }
         )
     }
 }
+

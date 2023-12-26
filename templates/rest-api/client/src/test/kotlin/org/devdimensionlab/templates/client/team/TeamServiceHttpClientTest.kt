@@ -1,9 +1,8 @@
-package org.devdimensionlab.templates.client
+package org.devdimensionlab.templates.client.team
 
 import org.devdimensionlab.templates.client.conf.RestApiApplication
-import org.devdimensionlab.templates.client.http.HttpRestClientApplication
-import org.devdimensionlab.templates.client.team.TeamServiceHttpClient
-import org.junit.jupiter.api.Assertions.*
+import org.devdimensionlab.templates.client.http.testapp.HttpRestClientApplication
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
