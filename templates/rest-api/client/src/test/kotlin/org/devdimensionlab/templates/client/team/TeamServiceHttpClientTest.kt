@@ -1,6 +1,6 @@
 package org.devdimensionlab.templates.client.team
 
-import org.devdimensionlab.templates.client.conf.RestApiApplication
+import org.devdimensionlab.templates.client.conf.RestApiHttpClient
 import org.devdimensionlab.templates.client.http.testapp.HttpRestClientApplication
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
@@ -19,7 +19,7 @@ class TeamServiceHttpClientTest {
 
     @BeforeEach
     fun setup() {
-        teamService = TeamServiceHttpClient(RestApiApplication("http://localhost:$serverPort"))
+        teamService = TeamServiceHttpClient(RestApiHttpClient("http://localhost:$serverPort"))
     }
 
     @Test

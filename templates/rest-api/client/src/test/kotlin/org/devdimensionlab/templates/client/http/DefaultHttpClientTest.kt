@@ -3,7 +3,6 @@ package org.devdimensionlab.templates.client.http
 import com.fasterxml.jackson.core.type.TypeReference
 import org.devdimensionlab.templates.api.Team
 import org.devdimensionlab.templates.client.http.testapp.HttpRestClientApplication
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.BeforeEach
@@ -14,16 +13,16 @@ import org.springframework.boot.test.web.server.LocalServerPort
 
 
 @SpringBootTest(classes = [HttpRestClientApplication::class], webEnvironment = RANDOM_PORT)
-class HttpRestClientTest {
+class DefaultHttpClientTest {
 
 	@LocalServerPort
 	var serverPort : Int = 0
 
-	private lateinit var restClient: HttpRestClient
+	private lateinit var restClient: DefaultHttpClient
 
 	@BeforeEach
 	fun setup() {
-		this.restClient = HttpRestClient(baseUrl = "http://localhost:$serverPort/resource")
+		this.restClient = DefaultHttpClient(baseUrl = "http://localhost:$serverPort/resource")
 	}
 
 	@Test
@@ -60,7 +59,7 @@ class HttpRestClientTest {
 
 	@Test
 	fun `Rest client should throw HttpRestExeption with ConnectException as cause for unknow host`() {
-		this.restClient = HttpRestClient(baseUrl = "http://unknowhost")
+		this.restClient = DefaultHttpClient(baseUrl = "http://unknowhost")
 
 		val httpRestException: HttpRestException = assertThrows(
 			HttpRestException::class.java) {
