@@ -23,16 +23,18 @@ open class TypedHttpClient(
     private val httpClient: HttpClient = HttpClient.newBuilder().version(HTTP_1_1).build(),
     private val objectMapper: ObjectMapper = ObjectMapper()
         .registerModule(JavaTimeModule())
-        .registerKotlinModule())
-{
+        .registerKotlinModule()
+) {
     private val log: Logger = LoggerFactory.getLogger(TypedHttpClient::class.java)
 
-    fun <T> getEntity(path: String, responseType: Class<T>): TypedResponse<T>
-        = getEntity(path, objectMapper.typeFactory.constructType(responseType))
-    fun <T> getEntity(path: String, responseType: TypeReference<T>): TypedResponse<T>
-        = getEntity(path, objectMapper.typeFactory.constructType(responseType))
-    fun <T> getEntities(path: String, responseType: Class<T>): TypedResponse<List<T>>
-        = getEntity(path, objectMapper.typeFactory.constructCollectionType(List::class.java, responseType))
+    fun <T> getEntity(path: String, responseType: Class<T>): TypedResponse<T> =
+        getEntity(path, objectMapper.typeFactory.constructType(responseType))
+
+    fun <T> getEntity(path: String, responseType: TypeReference<T>): TypedResponse<T> =
+        getEntity(path, objectMapper.typeFactory.constructType(responseType))
+
+    fun <T> getEntities(path: String, responseType: Class<T>): TypedResponse<List<T>> =
+        getEntity(path, objectMapper.typeFactory.constructCollectionType(List::class.java, responseType))
 
     private fun <T> getEntity(path: String, responseType: JavaType): TypedResponse<T> {
 
@@ -50,20 +52,14 @@ open class TypedHttpClient(
         val elapsedTime = currentTimeMillis().minus(start)
 
         return response.fold(
-            onSuccess = {
-                log.info("$uri ${it.statusCode()} ${elapsedTime}ms ")
-
-                if (it.headers().map()["content-type"]?.contains("application/problem+json") == true)
-                    TypedResponse(problem = objectMapper.readValue(it.body(), ProblemDetail::class.java))
-                else
-                    TypedResponse(
-                        status = it.statusCode(),
-                        bodyFunc = { objectMapper.readValue(it.body(), responseType) })
+            onSuccess = { httpResponse ->
+                log.info("$uri ${httpResponse.statusCode()} ${elapsedTime}ms ")
+                TypedResponse.create(objectMapper, httpResponse, responseType)
             },
-            onFailure = {
-                throw HttpRestException(
-                    message = "$uri ${elapsedTime}ms - $it",
-                    cause = it
+            onFailure = { exception ->
+                throw HttpException(
+                    message = "$uri ${elapsedTime}ms - $exception",
+                    cause = exception
                 )
             }
         )

@@ -61,24 +61,24 @@ class TypedHttpClientTest {
 	fun `Rest client should throw HttpRestExeption with ConnectException as cause for unknow host`() {
 		this.restClient = TypedHttpClient(baseUrl = "http://unknowhost")
 
-		val httpRestException: HttpRestException = assertThrows(
-			HttpRestException::class.java) {
+		val httpException: HttpException = assertThrows(
+			HttpException::class.java) {
 			restClient.getEntity("/xyz/red", Team::class.java)
 		}
 
-		assertEquals(java.net.ConnectException::class.java, httpRestException.cause?.javaClass )
+		assertEquals(java.net.ConnectException::class.java, httpException.cause?.javaClass )
 	}
 
 	@Test
 	fun `calling body on a result with a problem should result in an http-exception`() {
 
-		val httpRestException: HttpRestException = assertThrows(
-			HttpRestException::class.java) {
+		val httpException: HttpException = assertThrows(
+			HttpException::class.java) {
 			restClient.getEntity("/teams/exception", Team::class.java).body()
 		}
 
-	 	assertEquals("Internal Server Error", httpRestException.problem?.title )
-		assertEquals("IllegalArgumentException", httpRestException.problem?.detail )
+	 	assertEquals("Internal Server Error", httpException.problem?.title )
+		assertEquals("IllegalArgumentException", httpException.problem?.detail )
 	}
 
 
