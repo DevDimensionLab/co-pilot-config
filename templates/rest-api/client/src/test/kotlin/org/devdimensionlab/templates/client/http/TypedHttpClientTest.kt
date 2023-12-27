@@ -13,16 +13,16 @@ import org.springframework.boot.test.web.server.LocalServerPort
 
 
 @SpringBootTest(classes = [HttpRestClientApplication::class], webEnvironment = RANDOM_PORT)
-class DefaultHttpClientTest {
+class TypedHttpClientTest {
 
 	@LocalServerPort
 	var serverPort : Int = 0
 
-	private lateinit var restClient: DefaultHttpClient
+	private lateinit var restClient: TypedHttpClient
 
 	@BeforeEach
 	fun setup() {
-		this.restClient = DefaultHttpClient(baseUrl = "http://localhost:$serverPort/resource")
+		this.restClient = TypedHttpClient(baseUrl = "http://localhost:$serverPort/resource")
 	}
 
 	@Test
@@ -59,7 +59,7 @@ class DefaultHttpClientTest {
 
 	@Test
 	fun `Rest client should throw HttpRestExeption with ConnectException as cause for unknow host`() {
-		this.restClient = DefaultHttpClient(baseUrl = "http://unknowhost")
+		this.restClient = TypedHttpClient(baseUrl = "http://unknowhost")
 
 		val httpRestException: HttpRestException = assertThrows(
 			HttpRestException::class.java) {

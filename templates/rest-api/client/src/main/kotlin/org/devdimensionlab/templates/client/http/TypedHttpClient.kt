@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets.UTF_8
 import java.time.Duration
 
 
-open class DefaultHttpClient(
+open class TypedHttpClient(
     private val baseUrl: String,
     private val timeout: Duration = Duration.ofSeconds(15),
     private val httpClient: HttpClient = HttpClient.newBuilder().version(HTTP_1_1).build(),
@@ -25,7 +25,7 @@ open class DefaultHttpClient(
         .registerModule(JavaTimeModule())
         .registerKotlinModule())
 {
-    private val log: Logger = LoggerFactory.getLogger(DefaultHttpClient::class.java)
+    private val log: Logger = LoggerFactory.getLogger(TypedHttpClient::class.java)
 
     fun <T> getEntity(path: String, responseType: Class<T>): TypedResponse<T>
         = getEntity(path, objectMapper.typeFactory.constructType(responseType))
