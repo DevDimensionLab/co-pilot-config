@@ -8,7 +8,7 @@
 	"name": "demo-name",
 	"email": "demo-email@example.com"
   },
-  "description": "Demo of new app, generated with spring-boot and co-pilot templates",
+  "description": "Demo of new app with flyway",
   "dependencies": ["web-services"],
   "templates" : ["build-info", "actuator", "dockerfile", "flyway"],
   "render": {

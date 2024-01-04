@@ -1,8 +1,8 @@
 {
-    "groupId": "org.devdimensionlab.rest_api",
+    "groupId": "io.plybuild.rest_api",
     "artifactId": "rest-api",
     "language": "kotlin",
-    "package": "org.devdimensionlab.rest_api",
+    "package": "io.plybuild.rest_api",
     "applicationName": "rest-api",
     "name": "rest-api",
     "description": "REST API and client (http-integration)",
