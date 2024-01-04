@@ -1,4 +1,4 @@
-package no.copilot.template.demo.flyway
+package io.plybuild.templates.demo.flyway
 
 import java.time.LocalDateTime
 import jakarta.persistence.Column
@@ -14,18 +14,18 @@ import jakarta.persistence.Version
 @Entity
 class QueueLastReadEntity(
 
-        @Id
+    @Id
         @Column(name = "ID")
         @Enumerated(EnumType.STRING)
         val koe : Queue,
 
-        @Column(name = "POSITION")
+    @Column(name = "POSITION")
         var sekvensnummer : Long = 0,
 
-        @Column(name = "LAST_UPDATE")
+    @Column(name = "LAST_UPDATE")
         var registrert : LocalDateTime = LocalDateTime.now(),
 
-        @Version
+    @Version
         @Column(name = "VERSION")
         val version: Long = -1
 )

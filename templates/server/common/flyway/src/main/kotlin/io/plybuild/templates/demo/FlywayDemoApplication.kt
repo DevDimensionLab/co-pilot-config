@@ -1,4 +1,4 @@
-package no.copilot.template.demo
+package io.plybuild.templates.demo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

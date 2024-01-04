@@ -1,4 +1,4 @@
-package no.copilot.template.demo.flyway
+package io.plybuild.templates.demo.flyway
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
