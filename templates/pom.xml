@@ -5,7 +5,7 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.1</version>
     </parent>
-    <groupId>org.devdimensionlab.templates</groupId>
+    <groupId>io.plybuild.templates</groupId>
     <artifactId>templates</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -23,7 +23,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.devdimensionlab.templates</groupId>
+                <groupId>io.plybuild.templates</groupId>
                 <artifactId>common-logstash-logback</artifactId>
                 <version>${project.version}</version>
             </dependency>
