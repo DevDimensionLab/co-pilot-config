@@ -1,9 +1,9 @@
-package org.devdimensionlab.templates.client.team
+package io.plybuild.templates.client.team
 
 import com.fasterxml.jackson.core.type.TypeReference
-import org.devdimensionlab.templates.api.Team
-import org.devdimensionlab.templates.api.TeamService
-import org.devdimensionlab.templates.client.conf.RestApiHttpClient
+import io.plybuild.templates.api.Team
+import io.plybuild.templates.api.TeamService
+import io.plybuild.templates.client.conf.RestApiHttpClient
 
 class TeamServiceHttpClient(private val httpClient: RestApiHttpClient) : TeamService {
     override fun getAll(): List<Team> =

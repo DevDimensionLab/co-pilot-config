@@ -1,4 +1,4 @@
-package org.devdimensionlab.templates.client.http
+package io.plybuild.templates.client.http
 
 import com.fasterxml.jackson.databind.JavaType
 import com.fasterxml.jackson.databind.ObjectMapper

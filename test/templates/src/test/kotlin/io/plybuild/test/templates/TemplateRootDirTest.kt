@@ -1,5 +1,6 @@
 package io.plybuild.test.templates
 
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.io.File
@@ -7,25 +8,29 @@ import java.io.File
 class TemplateRootDirTest {
 
     val templatesRoot = TemplateRootDir(File("../../templates"))
+    val templateSources : List<TemplateSource>  = templatesRoot.getTemplateSources()
 
     @Test
-    fun test() {
-        val templateSources : List<TemplateSource>  = templatesRoot.getTemplateSources()
-
+    fun `package defined in ply_json should be consitens with kotlin source files`() {
         templateSources.forEach {
-            val ply = it.getPly()
-            println( "verify ${it.templateDir.dir.name} -> package: ${ply._package}")
-            println( "source files: " + it.getSourceCode() )
             it.getSourceCode().forEach { source ->
                 if(source.name.endsWith( ".kt")) {
-                    println( source )
-
-                    assertTrue(
-                        source.code.contains("package ${ply._package}")
-                    ) { "${source.file} does not contain package ${ply._package} defined in ply.json" }
-
+                    assertTrue(source.code.contains("package ${it.getPly()._package}"))
+                        { "${source.file} does not contain package ${it.getPly()._package} defined in ply.json" }
                 }
             }
         }
     }
+
+    @Test
+    fun `template source should no contain devdimensionlab or co-pilot`() {
+        templateSources.forEach {
+            it.getSourceCode().forEach { source ->
+                    assertFalse(source.code.contains("devdimensionlab"))
+                    { "${source.file} should not contain devdimensionlab" }
+                }
+            }
+    }
+
+    // devdimensionlab
 }

@@ -1,7 +1,7 @@
-package org.devdimensionlab.templates.client.http.testapp
+package io.plybuild.templates.client.http.testapp
 
-import org.devdimensionlab.templates.api.Team
-import org.devdimensionlab.templates.api.TeamService
+import io.plybuild.templates.api.Team
+import io.plybuild.templates.api.TeamService
 import org.springframework.http.HttpStatusCode
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

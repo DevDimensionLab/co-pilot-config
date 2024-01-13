@@ -1,4 +1,4 @@
-package org.devdimensionlab.templates.client.http
+package io.plybuild.templates.client.http
 
 class HttpException(
     message: String?,

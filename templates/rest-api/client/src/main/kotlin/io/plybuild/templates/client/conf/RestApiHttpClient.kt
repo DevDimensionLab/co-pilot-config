@@ -1,5 +1,5 @@
-package org.devdimensionlab.templates.client.conf
+package io.plybuild.templates.client.conf
 
-import org.devdimensionlab.templates.client.http.TypedHttpClient
+import io.plybuild.templates.client.http.TypedHttpClient
 
 class RestApiHttpClient(baseUrl: String) : TypedHttpClient("$baseUrl/resource")

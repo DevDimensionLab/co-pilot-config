@@ -1,4 +1,4 @@
-package org.devdimensionlab.templates.client.http.testapp
+package io.plybuild.templates.client.http.testapp
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ProblemDetail

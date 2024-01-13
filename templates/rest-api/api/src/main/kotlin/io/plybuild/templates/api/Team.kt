@@ -1,3 +1,3 @@
-package org.devdimensionlab.templates.api
+package io.plybuild.templates.api
 
 data class Team(val name : String)

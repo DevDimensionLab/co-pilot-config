@@ -3,23 +3,5 @@
     "artifactId": "api-client-template-pom",
     "language": "kotlin",
     "package": "io.plybuild.templates",
-    "applicationName": "",
-    "name": "api_client",
-    "description": "Demo of api and client structure",
-    "team": {
-        "name": "",
-        "email": ""
-    },
-    "dependencies": [],
-    "templates": null,
-    "settings": {
-        "disableDependencySort": false,
-        "disableSpringBootUpgrade": false,
-        "disableKotlinUpgrade": false,
-        "pomFileIndentation": "",
-        "disableUpgradesFor": null,
-        "maxSpringBootVersion": "",
-        "maxVersionForDependencies": null
-    },
-    "render": null
+    "description": "Demo of api and client structure"
 }

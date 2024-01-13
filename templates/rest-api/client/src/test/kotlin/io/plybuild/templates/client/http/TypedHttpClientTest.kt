@@ -1,8 +1,8 @@
-package org.devdimensionlab.templates.client.http
+package io.plybuild.templates.client.http
 
 import com.fasterxml.jackson.core.type.TypeReference
-import org.devdimensionlab.templates.api.Team
-import org.devdimensionlab.templates.client.http.testapp.HttpRestClientApplication
+import io.plybuild.templates.api.Team
+import io.plybuild.templates.client.http.testapp.HttpRestClientApplication
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.BeforeEach

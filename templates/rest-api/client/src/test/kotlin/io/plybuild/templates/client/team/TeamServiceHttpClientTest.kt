@@ -1,7 +1,8 @@
-package org.devdimensionlab.templates.client.team
+package io.plybuild.templates.client.team
 
-import org.devdimensionlab.templates.client.conf.RestApiHttpClient
-import org.devdimensionlab.templates.client.http.testapp.HttpRestClientApplication
+import io.plybuild.templates.client.conf.RestApiHttpClient
+import io.plybuild.templates.client.team.TeamServiceHttpClient
+import io.plybuild.templates.client.http.testapp.HttpRestClientApplication
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
