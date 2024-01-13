@@ -1,6 +1,8 @@
 package org.devdimensionlab.templates.client.http
 
 import com.fasterxml.jackson.core.type.TypeReference
+import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES
 import com.fasterxml.jackson.databind.JavaType
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
@@ -24,6 +26,7 @@ open class TypedHttpClient(
     private val objectMapper: ObjectMapper = ObjectMapper()
         .registerModule(JavaTimeModule())
         .registerKotlinModule()
+        .configure(FAIL_ON_UNKNOWN_PROPERTIES, false)
 ) {
     private val log: Logger = LoggerFactory.getLogger(TypedHttpClient::class.java)
 

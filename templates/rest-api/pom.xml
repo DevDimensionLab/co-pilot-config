@@ -6,7 +6,6 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>api-client-template-pom</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>api</module>
