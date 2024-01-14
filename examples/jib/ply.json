@@ -1,0 +1,29 @@
+{
+  "groupId": "io.plybuild",
+  "artifactId": "pom-render-test",
+  "language": "kotlin",
+  "package": "io.plybuild.test",
+  "applicationName": "Test",
+  "name": "Test pom-render",
+  "description": "Test template with a pom.xml.render-file",
+  "team": {
+    "name": "team-name",
+    "email": "team@email.com"
+  },
+  "dependencies": [
+    "web-services"
+  ],
+  "templates": [
+    "server/common/maven-docker-standalone",
+    "common/logstash-logback"
+  ],
+  "settings": {
+    "disableDependencySort": false,
+    "disableSpringBootUpgrade": false,
+    "disableKotlinUpgrade": false,
+    "disableUpgradesFor": null,
+    "maxSpringBootVersion": null,
+    "maxVersionForDependencies": null
+  },
+  "render": null
+}

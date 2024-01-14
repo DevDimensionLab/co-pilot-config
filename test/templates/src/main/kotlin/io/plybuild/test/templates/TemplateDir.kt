@@ -42,5 +42,4 @@ data class TemplateDir(
                     .filter { it.isDirectory }
                     .filter { it.name != "target" }
                     .flatMap { getSourceCode(it.listFiles()) })
-
 }

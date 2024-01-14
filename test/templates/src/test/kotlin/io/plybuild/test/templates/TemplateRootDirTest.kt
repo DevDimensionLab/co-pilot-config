@@ -23,14 +23,12 @@ class TemplateRootDirTest {
     }
 
     @Test
-    fun `template source should no contain devdimensionlab or co-pilot`() {
+    fun `template source should no contain co-pilot`() {
         templateSources.forEach {
             it.getSourceCode().forEach { source ->
-                    assertFalse(source.code.contains("devdimensionlab"))
-                    { "${source.file} should not contain devdimensionlab" }
+                    assertFalse(source.code.contains("co-pilot"))
+                    { "${source.file} should not contain co-pilot" }
                 }
             }
     }
-
-    // devdimensionlab
 }

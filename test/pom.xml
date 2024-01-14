@@ -12,6 +12,7 @@
 
     <modules>
         <module>templates</module>
+        <module>examples</module>
     </modules>
     <dependencies>
         <dependency>
