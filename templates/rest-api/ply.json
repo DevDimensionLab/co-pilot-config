@@ -1,25 +1,7 @@
 {
-    "groupId": "org.devdimensionlab.templates",
+    "groupId": "io.plybuild.templates",
     "artifactId": "api-client-template-pom",
     "language": "kotlin",
-    "package": "org.devdimensionlab.templates",
-    "applicationName": "",
-    "name": "api_client",
-    "description": "Demo of api and client structure",
-    "team": {
-        "name": "",
-        "email": ""
-    },
-    "dependencies": [],
-    "templates": null,
-    "settings": {
-        "disableDependencySort": false,
-        "disableSpringBootUpgrade": false,
-        "disableKotlinUpgrade": false,
-        "pomFileIndentation": "",
-        "disableUpgradesFor": null,
-        "maxSpringBootVersion": "",
-        "maxVersionForDependencies": null
-    },
-    "render": null
+    "package": "io.plybuild.templates",
+    "description": "Demo of api and client structure"
 }

@@ -1,8 +1,8 @@
 {
   "language": "kotlin",
-  "groupId": "no.copilot.template",
+  "groupId": "io.plybuild.templates",
   "artifactId": "flyway-demo",
-  "package": "no.copilot.template.demo",
+  "package": "io.plybuild.templates.demo",
   "name": "flyway-demo",
   "description": "Automate database migrations with Flyway in Spring Boot.",
   "dependencies": ["data-jpa", "h2", "flyway"]

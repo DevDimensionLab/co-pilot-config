@@ -1,5 +1,5 @@
 {
   "language": "kotlin",
-  "package": "org.devdimensionlab.template.microservice",
+  "package": "io.plybuild.templates.microservice",
   "description": "Basic controller, service and data-class"
 }

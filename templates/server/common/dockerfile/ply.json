@@ -1,8 +1,7 @@
 {
   "language": "docker",
-  "groupId": "no.copilot.template",
+  "groupId": "io.plybuild.templates",
   "artifactId": "dockerfile",
-  "package": "no.copilot.template.demo",
   "name": "dockerfile",
   "description": "Docker config for Java/Kotlin app containerization.",
   "dependencies": []
