@@ -1,3 +1,6 @@
+workspace.json
+.structurizr
+bin
 .DS_Store
 target
 .idea
